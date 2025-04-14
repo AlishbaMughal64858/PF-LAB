@@ -1,0 +1,44 @@
+package com.mycompany.arraylist;
+import java.util.ArrayList;
+/**i
+ *
+ * @author Ma pharmacy 
+ */
+public class Employee {
+      String name;
+      int salary;
+    Employee(String name, int salary){
+    this.name=name;
+    this.salary=salary;
+    
+    
+}
+public void DisplayInfo(){
+    System.out.println("Name:" +name+ "\nSalary:"+salary);
+}
+   
+
+     
+package com.mycompany.arraylist;
+import java.util.ArrayList;
+// * @author Ma pharmacy 
+// */
+public class ListEmployees {
+public static void main(String[]args){
+    ArrayList<Employee> Employees=new ArrayList<>();
+    Employees.add(new Employee("zaneera",100000));
+     Employees.add(new Employee("eman",200000));
+     Employees.add(new Employee("aina",3000000));
+     System.out.println("Employee details");
+     for(Employee e1: Employees){
+         e1.DisplayInfo();
+     }
+    Employees.remove(1); 
+
+        System.out.println("\nEmployee details after removal:");
+        for (Employee e1 : Employees) {
+            e1.DisplayInfo();
+        }
+     
+}
+}
